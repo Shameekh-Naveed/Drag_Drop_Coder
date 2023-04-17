@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Drag & Drop</title>
+	</head>
+	<body>
+		<div class="container">
+			<div id="columnLeft">
+				<div id="logoContainer">
+					<img src="./assets/logo.png" alt="logo" />
+					<h1>Drag & Drop Coder</h1>
+				</div>
+				<div id="optionsContainer">
+					<h2>General</h2>
+					<div class="codesGroup">
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="variableDeclaration"
+							>
+								Declare Variable
+							</p>
+						</div>
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="displayOutput"
+							>
+								Display Output
+							</p>
+						</div>
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="arithematic"
+							>
+								Arithematic
+							</p>
+						</div>
+					</div>
+					<h2>Conditionals</h2>
+					<div class="codesGroup">
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="ifCondition"
+							>
+								If
+							</p>
+						</div>
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="conditionalElse"
+							>
+								If Else
+							</p>
+						</div>
+					</div>
+					<h2>Loops</h2>
+					<div class="codesGroup">
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="forLoop"
+							>
+								For Loop
+							</p>
+						</div>
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="whileLoop"
+							>
+								While Loop
+							</p>
+						</div>
+					</div>
+					<h2>File Handling</h2>
+					<div class="codesGroup">
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="readFile"
+							>
+								Read File
+							</p>
+						</div>
+						<div class="box">
+							<p
+								draggable="true"
+								ondragstart="drag(event)"
+								id="writeFile"
+							>
+								Write File
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="systemButtons">
+					<!-- <button onclick="addCodeBlock()">Add +</button> -->
+					<button onclick="generatePHPCode()">Gen Code!</button>
+				</div>
+			</div>
+			<!-- This dive did not initally have the drop functionality remove those two to regain normallness -->
+			<div
+				id="columnMid"
+				ondrop="drop(event)"
+				ondragover="allowDrop(event)"
+			>
+				<!-- <div
+					class="codeBlock"
+					ondrop="drop(event)"
+					ondragover="allowDrop(event)"
+					id="drop1"
+				></div> -->
+				<!-- <div class="codeBlock" id="drop1"></div> -->
+			</div>
+			<div id="columnRight">
+				<div id="phpCode"></div>
+				<div id="phpOutput"></div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

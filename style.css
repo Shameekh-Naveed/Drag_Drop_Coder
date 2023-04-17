@@ -1,0 +1,320 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--forLoopColor: #ff6b6b;
+	--whileLoopColor: #ffe66d;
+	--ifStatementColor: #4ecdc4;
+	--elseStatementColor: #b9a394;
+	--variableDeclarationColor: #ecc8ae;
+	--arithemeticExpressionColor: #edb88b;
+	--displayOutputColor: #ac80a0;
+	--readFileColor: #608bdb;
+	--writeFileColor: #a1e8af;
+}
+@font-face {
+	font-family: latoBold;
+	src: url(./assets/Lato-Bold.ttf);
+}
+@font-face {
+	font-family: latoRegular;
+	src: url(./assets/Lato-Regular.ttf);
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	font-family: 'latoRegular', sans-serif;
+	background-color: #f6f0ed;
+	/* padding: 0.5rem; */
+}
+.container > div {
+	border: 1px solid black;
+	padding: 0.5rem;
+	max-height: 100%;
+	overflow-y: auto;
+}
+#displayOutput {
+	border: 3px solid var(--displayOutputColor);
+	/* background-color: var(--displayOutputColor); */
+}
+#readFile {
+	border: 3px solid var(--readFileColor);
+	/* background-color: var(--readFileColor); */
+}
+#writeFile {
+	border: 3px solid var(--writeFileColor);
+	/* background-color: var(--writeFileColor); */
+}
+#forLoop {
+	border: 3px solid var(--forLoopColor);
+	/* background-color: var(--forLoopColor); */
+}
+#whileLoop {
+	border: 3px solid var(--whileLoopColor);
+	/* background-color: var(--whileLoopColor); */
+}
+#ifCondition {
+	border: 3px solid var(--ifStatementColor);
+	/* background-color: var(--ifStatementColor); */
+}
+#conditionalElse {
+	border: 3px solid var(--elseStatementColor);
+	/* background-color: var(--elseStatementColor); */
+}
+#variableDeclaration {
+	border: 3px solid var(--variableDeclarationColor);
+	/* background-color: var(--variableDeclarationColor); */
+}
+#arithematic {
+	border: 3px solid var(--arithemeticExpressionColor);
+	/* backgroun */
+}
+
+#columnLeft {
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 0 0.5rem 0.2rem 0.5rem;
+}
+#columnMid {
+	width: 45%;
+}
+#columnRight {
+	width: 30%;
+}
+#logoContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: #9860b7;
+	width: 100%;
+	margin: 0 -0.5rem;
+	padding: 0.5rem 0.25rem;
+	/* flex-direction: column; */
+}
+#logoContainer > img {
+	height: 50px;
+	width: auto;
+}
+#logoContainer > h1 {
+	font-size: 1.3rem;
+	text-align: center;
+	max-width: 40%;
+	/* font-weight: 600; */
+	font-family: 'latoBold', sans-serif;
+	color: white;
+}
+.codeBlock {
+	background-color: #e8e6e5;
+	padding: 10px;
+	min-height: 50px;
+	/* min-width: 75px; */
+	width: max-content;
+	border-radius: 5px;
+	/* max-width: 100%; */
+	/* border: 1px solid blue; */
+	margin: 0.75rem;
+}
+#optionsContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+#optionsContainer > h2 {
+	font-size: 1.2rem;
+	font-family: 'latoBold', sans-serif;
+	text-align: center;
+	color: #9860b7;
+	text-transform: uppercase;
+}
+.codesGroup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0.5rem;
+}
+.box {
+	cursor: move;
+	height: 3rem;
+	/* padding: 1rem; */
+	/* max-width: 8rem; */
+	width: 8rem;
+	transition: all 0.15s ease-in;
+	border-radius: 10px;
+	/* border: 1px solid #7ebcd6; */
+	margin: 0.2rem;
+	background-color: white;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+.box > p {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 0.2rem;
+}
+.box:hover {
+	background-color: #7ebcd6;
+	color: white;
+	/* border: none; */
+}
+#systemButtons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+#systemButtons > button {
+	border: none;
+	background-color: #9860b7;
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0.65rem 2rem;
+	border-radius: 3px;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.15s linear;
+}
+/* Add a hover animation for this button */
+#systemButtons > button:hover {
+	background-color: #2b367d;
+}
+input[type='text'],
+input[type='number'] {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0.5rem;
+	margin: 0.5rem 0.5rem;
+	width: 4rem;
+	max-width: 100%;
+}
+select {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0.5rem;
+	margin: 0.5rem 0.5rem;
+	width: 3rem;
+	max-width: 100%;
+}
+.codeBlockText {
+	font-size: 0.9rem;
+	/* color: white; */
+	font-weight: 600;
+}
+.keyword {
+	color: #ff0000;
+}
+.variable {
+	color: #0000ff;
+}
+.value {
+	color: #008000;
+}
+.function {
+	color: #030370;
+}
+.variableDeclaration {
+	padding: 0.25rem;
+	color: black;
+	border-radius: inherit;
+	background-color: var(--variableDeclarationColor);
+}
+.displayOutput {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--displayOutputColor);
+}
+.arithemeticExpression {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--arithemeticExpressionColor);
+}
+.conditional {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--ifStatementColor);
+}
+.conditionalElse {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--elseStatementColor);
+}
+.forLoop {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--forLoopColor);
+}
+.whileLoop {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--whileLoopColor);
+}
+.readFile {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--readFileColor);
+}
+.writeFile {
+	border-radius: inherit;
+	padding: 0.25rem;
+	color: black;
+	background-color: var(--writeFileColor);
+}
+.writeFile,
+.readFile,
+.whileLoop,
+.forLoop,
+.conditionalElse,
+.conditional,
+.arithemeticExpression,
+.displayOutput,
+.variableDeclaration {
+	border: 1px solid black;
+}
+.isBlock {
+	background-color: #e8e6e5;
+	min-height: 40%;
+	border-radius: inherit;
+	padding: 20px;
+	margin: 5px;
+	border: 1px solid black;
+}
+#columnRight {
+	display: flex;
+	flex-direction: column;
+}
+#columnRight > div {
+	border: 1px solid red;
+	min-height: 50%;
+	overflow-y: auto;
+}
+.codeLine {
+	padding: 2px 10px;
+}
